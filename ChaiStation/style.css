@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --slantedText:"Grand Hotel", cursive;
+  --primaryColor: #698f3f;
+  --secondoryColor: #fca311;
+  --mainDark: #3a3e3b;
+  --mainWhite: #fff;
+  --mainGrey: #e5e5e5;
+  --mainTransition: all 0.3s ease-in-out;
+  --letterSpacing: 0.3rem;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.5;
+}
+
+/* helper/utility */
+a {
+  text-decoration: none;
+}  
+.text-white {
+  color: var(--mainWhite);
+}
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: var(--primaryColor);
+}
+/* clearfix */
+.clearfix::after , .clearfix::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+/* globals */
+.section-center {
+  padding: 4rem 0;
+  width: 80vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--slantedText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  
+}
+/* navbar */
+/* header */
+.header {
+  min-height: 99vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('./images/main-bcg.jpeg') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* banner */
+.banner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  letter-spacing: var(--letterSpacing);
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  font-family: var(--slantedText);
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  animation: slideFromLeft 5s ease-in-out 1;
+}
+.banner-title {
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  font-size: 3.2rem;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  animation: slideFromRight 5s ease-in-out 1;
+}
+
+.main-btn, .banner-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: var(--primaryColor);
+  text-transform: uppercase;
+  outline: 0.2rem solid var(--primaryColor);
+  outline-offset: 0.3rem;
+  font-weight: bold;
+  color: var(--mainDark);
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.main-btn:hover, .banner-btn:hover {
+  color: var(--mainWhite);
+  opacity: 0.7;
+} 
+
+.banner-btn{
+  padding: 1.2rem 1.5rem;
+  animation: show 5s ease-in-out 1;
+}
+/* end header */
+
+/* content-divider */
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(to left, var(--primaryColor),var(--secondoryColor),var(--primaryColor));
+}
+/* end content-divider */
+/* skills */
+.skills {
+  background: var(--mainGrey);
+}
+.skill {
+  padding: 1.5rem 0;
+  text-align: center;
+  transition: var(--mainTransition);
+  
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+} 
+.skill-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: var(--letterSpacing);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.skill-text {
+  max-width: 13rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  background: var(--primaryColor);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-6px);
+  color: var(--secondoryColor);
+}
+.skill:hover .skill-title {
+  color: var(--mainWhite);
+}
+
+@media screen and (min-width:576px){
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width:1080px){
+  .skill {
+    width: 25%;
+  }
+}
+/* end skills */
+
+/* about */
+.about-img-article, .about-info {
+  padding: 2rem 0;
+}
+.about-picture-container {
+  background: var(--primaryColor);
+  border: 0.5rem solid var(--primaryColor);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+.about-picture-container:hover .about-picture {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+.about-picture {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+.about-text {
+  margin: 1rem 0;
+  max-width: 26rem;
+}
+@media screen and (min-width: 892px){
+  .about-img-article, .about-info {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+/* end about */
+
+/* products */
+.products {
+  background: var(--mainDark);
+}
+.product-info-article,
+.product-details-article {
+  padding: 2rem 0;
+}
+
+.product-text{
+  margin: 1rem 0;
+  max-width: 26rem;
+}
+
+.product-img {
+  width: 100%;
+  display:block;
+  border-radius: 1rem;
+}
+
+.product {
+  padding: 2rem 0;
+}
+
+.product-title {
+  margin-top: 2rem;
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: var(--letterSpacing);
+}
+
+.product-price {
+  margin-top: 1rem;
+  color: var(--primaryColor);
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px)
+{
+  .product {
+    float: left;
+    width: 50%;
+    padding: 2rem 1rem;
+  }
+  .product-info-article {
+    padding: 2rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .product {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-info-article {
+    float: left;
+    width: 33.33%;
+  }
+  .product-details-article {
+    float: left;
+    width: 66.66%;
+  }
+}
+/* end products */
+
+/* contact */
+
+.contact {
+  padding: 2rem 0;
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-title {
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  letter-spacing: calc(var(--letterSpacing) * 2);
+  font-family: none;
+}
+.contact-info {
+  font-weight: bold;
+  font-family: var(--slantedText);
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid var(--primaryColor);
+  outline: none;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-control::placeholder {
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  color: var(--primaryColor);
+}
+
+@media screen and (min-width: 992px) {
+  .contact-details,.contact-form {
+    float: left;
+    width: 50%;
+    padding: 0 1rem;
+  }
+  .contact-details{
+    padding-top: 2rem;
+  }
+}
+
+/* end contact */
+
+/* animations */
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+  25% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  25% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* end animations */
