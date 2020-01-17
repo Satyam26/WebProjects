@@ -14,7 +14,23 @@
 
 <body>
   <!-- nav button -->
+  <span class="nav-btn" id="nav-btn">
+    <i class="fas fa-bars"></i>
+  </span>
   <!-- navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-header">
+      <span class="nav-close" id="nav-close">
+        <i class="fas fa-times"></i>
+      </span>
+    </div>
+    <ul class="nav-items">
+      <li><a href="index.html" class="nav-link">home</a></li>
+      <li><a href="skills.html" class="nav-link">skills</a></li>
+      <li><a href="about.html" class="nav-link">about</a></li>
+      <li><a href="products.html" class="nav-link">products</a></li>
+    </ul>
+  </nav>
   <!-- header -->
   <header class="header">
     <div class="banner">
@@ -125,7 +141,62 @@
     </div>
   </section>
   <!-- end product section -->
-  <!-- contant section -->
+  <!-- services -->
+<section class="services">
+  <div class="services-title text-center">
+    <h3 class="section-subtitle">Explore</h3>
+    <h2 class="section-title">our services</h2>
+  </div>
+  <div class="section-center clearfix">
+    <article class="service-card">
+      <!-- single card -->
+        <div class="service-img-container">
+          <img src="./images/product-1.jpeg" alt="tea" class="service-img">
+          <!-- service-icon -->
+          <span class="service-icon"><i class="fas fa-mortar-pestle"></i></span>
+        </div>
+        
+        <div class="service-info">
+          <h4 class="service-text">custom recipe <br> services</h4>
+          <button type="submit" class="service-btn">Read More</button>
+          
+        </div>
+      <!-- end single card -->
+    </article>
+    <article class="service-card">
+      <!-- single card -->
+        <div class="service-img-container">
+          <img src="./images/product-2.jpeg" alt="tea" class="service-img">
+          <!-- service-icon -->
+          <span class="service-icon"><i class="fas fa-mug-hot"></i></span>
+        </div>
+        
+        <div class="service-info">
+          <h4 class="service-text">tea aging<br> services</h4>
+          <button type="submit" class="service-btn">Read More</button>
+        </div>
+      <!-- end single card -->
+    </article>
+    <article class="service-card">
+      <!-- single card -->
+        <div class="service-img-container">
+          <img src="./images/product-3.jpeg" alt="tea" class="service-img">
+          <!-- service-icon -->
+          <span class="service-icon"><i class="fas fa-home"></i></span>
+        </div>
+        <div class="service-info">
+          <h4 class="service-text">home delivery <br> services</h4>
+          <button type="submit" class="service-btn">Read More</button>
+        </div>
+      <!-- end single card -->
+    </article>
+  </div>
+</section>
+  
+
+  <!-- end services -->
+
+  <!-- contact section -->
   <section class="contact">
     <div class="section-center clearfix">
       <article class="contact-details">
@@ -140,12 +211,12 @@
         </div>
         <div class="contact-item">
           <h3 class="contact-title"><span class="contact-icon"><i class="fas fa-phone"></i></span> telephone</h3>
-          <p class="contact-info"> +91 8562485232</p>
+          <p class="contact-info"> +91 85**589254</p>
         </div>
         <!-- end info  -->
       </article>
       <article class="contact-form">
-        <form action="useformspree" method="POST" class="form-group">
+        <form action="https://formspree.io/xwklreka" method="POST" method="POST" class="form-group">
           <input type="text" name="name" class="form-control" placeholder="name">
           <input type="email" name="email" class="form-control" placeholder="email">
           <textarea name="message" rows="5" class="form-control" placeholder="message" ></textarea>
@@ -154,7 +225,29 @@
       </article>
     </div>
   </section>
-  <!-- end contant section -->
+  <!-- end contact section -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="section-center">
+      <div class="footer-icons">
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2020 <span class="footer-title">chai station</span>. all rights reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <script src="app.js"></script>
 </body>
 
 </html>
