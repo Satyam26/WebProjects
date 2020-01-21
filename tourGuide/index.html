@@ -14,7 +14,38 @@
 <body>
   <header id="home">
     <!-- navbar -->
-    <nav></nav>
+    <nav class="navbar fixed">
+      <!-- navbar center -->
+      <div class="nav-center">
+        <!-- nav-header -->
+        <div class="nav-header">
+          <img src="/images/logo.svg" alt="logo" class="nav-logo">
+          <button class="nav-toggle" type="button" id="nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- nav links -->
+        <div class="nav-links " id="nav-links">
+          <a class="nav-link scroll-link" href="#home">Home</a>
+          <a class="nav-link scroll-link" href="#about">About</a>
+          <a class="nav-link scroll-link" href="#services">Services</a>
+          <a class="nav-link scroll-link" href="#tours">Tours</a>
+        </div>
+        <!-- nav-icons -->
+        <div class="nav-social">
+        <span class="nav-icon">
+          <i class="fab fa-instagram"></i>
+        </span>
+        <span class="nav-icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span class="nav-icon">
+          <i class="fab fa-linkedin"></i>
+        </span>
+      </div>
+
+        
+      </div>
+      
+    </nav>
     <!-- hero -->
     <div class="hero">
       <div class="hero-container">
@@ -191,10 +222,10 @@
   <section class="section-footer">
     <div class="footer-center">
       <div class="footer-links">
-        <a class="footer-link" href="">Home</a>
-        <a class="footer-link" href="">About</a>
-        <a class="footer-link" href="">Services</a>
-        <a class="footer-link" href="">Tours</a>
+        <a class="footer-link scroll-link" href="#home">Home</a>
+        <a class="footer-link scroll-link" href="#about">About</a>
+        <a class="footer-link scroll-link" href="#services">Services</a>
+        <a class="footer-link scroll-link" href="#tours">Tours</a>
       </div>
       <div class="footer-social">
         <span class="footer-icon">
@@ -208,11 +239,12 @@
         </span>
       </div>
       <div class="footer-message">
-        <p>Copyright &copy; Travel World 2020. All Rights Reserved</p>
+        <p>Copyright &copy; Travel World <span id="date"></span> . All Rights Reserved</p>
       </div>
     </div>
   </section>
   <!-- end footer -->
+  <!-- script -->
+  <script src="./js/app.js"></script>
 </body>
-
 </html>
